@@ -1,0 +1,44 @@
+{
+  "table_rows": [
+    {
+      "M": 4,
+      "regime": "midpoint",
+      "lambda": 0.1,
+      "phi": 0.05,
+      "x0_star": 10.008136902145486,
+      "frictionless_price": 9.95412001059892,
+      "cost_minus_frictionless": 0.054016891546565304,
+      "nondegenerate": true
+    },
+    {
+      "M": 4,
+      "regime": "general",
+      "lambda": 0.1,
+      "phi": 0.08,
+      "x0_star": 10.043152334478851,
+      "frictionless_price": 9.95412001059892,
+      "cost_minus_frictionless": 0.08903232387993043,
+      "nondegenerate": true
+    },
+    {
+      "M": 8,
+      "regime": "midpoint",
+      "lambda": 0.1,
+      "phi": 0.05,
+      "x0_star": 10.251005728210188,
+      "frictionless_price": 10.196840701569085,
+      "cost_minus_frictionless": 0.0541650266411029,
+      "nondegenerate": true
+    },
+    {
+      "M": 8,
+      "regime": "general",
+      "lambda": 0.1,
+      "phi": 0.08,
+      "x0_star": 10.286227305316821,
+      "frictionless_price": 10.196840701569085,
+      "cost_minus_frictionless": 0.08938660374773555,
+      "nondegenerate": true
+    }
+  ]
+}
