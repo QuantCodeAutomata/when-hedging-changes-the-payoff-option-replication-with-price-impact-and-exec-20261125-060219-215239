@@ -17,9 +17,9 @@ EXP1_K = 100.0         # call strike, Sec. 2.4.1
 EXP1_LAMBDA_PHI_SETS = ((0.1, 0.05), (0.2, 0.1), (0.3, 0.15))
 EXP1_N_UNIT = 0.2      # illustrative underlying transaction size n, Fig. 2 caption
 # Illustrative option transaction size m: the paper fixes n = 0.2 shares of the
-# underlying but does not give the corresponding m in contracts (uncertainty
-# noted in the task); we take m = n, the same illustrative size in contract
-# units, consistent with one option contract corresponding to N shares.
+# underlying but does not give the corresponding m in contracts. We take
+# m = n, the same illustrative size in contract units, consistent with one
+# option contract corresponding to N shares.
 EXP1_M_UNIT = EXP1_N_UNIT
 EXP1_N_MULTIPLES = (-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5)  # multiples of n/m, Fig. 2 table
 

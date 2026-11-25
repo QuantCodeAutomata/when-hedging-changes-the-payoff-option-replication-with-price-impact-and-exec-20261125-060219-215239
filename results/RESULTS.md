@@ -1,11 +1,12 @@
 # Results — When Hedging Changes the Payoff: Option Replication with Price Impact and Execution Costs
 
-Paper: *When Hedging Changes the Payoff: Option Replication with Price Impact and Execution Costs*
+Paper: David Itkin and Leandro Sánchez-Betancourt, *When Hedging Changes the
+Payoff: Option Replication with Price Impact and Execution Costs*
 (arXiv:2609.36257v2).
 
 This file reports the outputs of the five implemented experiments, each compared
 against the values and qualitative claims given in the paper, together with the
-deviations made from the paper's exact specification and the paper results that
+deviations made from the paper's exact methodology and the paper results that
 are not reproduced here.
 
 ## Experiment 1 — One-period binomial model: limit order book shape (Sec. 2.4.1)

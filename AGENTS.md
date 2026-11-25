@@ -4,7 +4,8 @@ Guide for coding agents and contributors working on this repository.
 
 ## What this implements
 
-A replication of selected numerical experiments from David Itkin, *When
+A replication of selected numerical experiments from David Itkin and Leandro
+Sánchez-Betancourt, *When
 Hedging Changes the Payoff: Option Replication with Price Impact and
 Execution Costs* (arXiv:2609.36257v2):
 

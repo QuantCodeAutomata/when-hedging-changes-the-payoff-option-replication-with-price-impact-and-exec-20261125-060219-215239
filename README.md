@@ -1,7 +1,8 @@
 # When Hedging Changes the Payoff: Option Replication with Price Impact and Execution Costs
 
-Replication of selected numerical experiments from David Itkin, "When Hedging
-Changes the Payoff: Option Replication with Price Impact and Execution Costs".
+Replication of selected numerical experiments from David Itkin and Leandro
+Sánchez-Betancourt, "When Hedging Changes the Payoff: Option Replication with
+Price Impact and Execution Costs" (arXiv:2609.36257v2).
 
 This repository implements:
 

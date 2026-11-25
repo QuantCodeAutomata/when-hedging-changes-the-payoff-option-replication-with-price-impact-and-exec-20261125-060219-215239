@@ -54,7 +54,8 @@ def compute_curves(s0_grid: np.ndarray) -> dict:
 
 
 def run_checks(s0_grid: np.ndarray, curves: dict, frictionless: dict) -> dict:
-    """Checks (a)-(c) described in the experiment task."""
+    """Checks (a)-(c): price above the frictionless benchmark, the lambda-N
+    scaling identity in the midpoint regime, and monotonicity in N."""
     checks: dict = {}
 
     # (a) price_per_contract >= frictionless benchmark elementwise, for every (n, lam).
