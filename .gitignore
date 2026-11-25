@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.parquet
+*.feather
+*.arrow
+*.pkl
+*.npy
+*.npz
+*.h5
+*.html
+.env
+data/cache/
+.ipynb_checkpoints/
