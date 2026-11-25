@@ -38,11 +38,13 @@ from src.calibration import (
 )
 from src.config import (
     EXP2_END_DATE,
+    EXP2_LIMIT_PER_WINDOW,
     EXP2_LOOKBACK_DAYS,
     EXP2_MONEYNESS_BANDS,
     EXP2_N_EXPIRIES_PAPER,
     EXP2_N_EXPIRIES_RUN,
     EXP2_N_OPTIONS_PAPER,
+    EXP2_N_WINDOWS,
     EXP2_START_DATE,
     EXP2_UNDERLYING,
 )
@@ -51,8 +53,8 @@ RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 # Target moneyness offsets |S_0/K - 1| sampled for every expiry, spanning the
 # bands of Table 1 (0.5%, 1%, 2%, 5%, all strikes).
 MONEYNESS_TARGETS = (0.002, 0.004, 0.006, 0.008, 0.01, 0.015, 0.02, 0.03, 0.05, 0.08)
-N_WINDOWS = 3          # 5-minute NBBO sampling windows per trading session
-LIMIT_PER_WINDOW = 300  # quotes retrieved per window
+N_WINDOWS = EXP2_N_WINDOWS                # 5-minute NBBO sampling windows per trading session
+LIMIT_PER_WINDOW = EXP2_LIMIT_PER_WINDOW  # quotes retrieved per window
 
 
 def previous_trading_day(bars: pd.DataFrame, date: pd.Timestamp) -> pd.Timestamp | None:

@@ -39,6 +39,11 @@ EXP2_N_OPTIONS_PAPER = 15570
 # executed, reduced expiration sample and the corresponding command.
 EXP2_N_EXPIRIES_RUN = 8              # expirations sampled across the period for the executed run (time-reduced)
 EXP2_N_EXPIRIES_PAPER = 125          # approx. trading days Jan-Jun 2025 (one expiry/day, SPY daily options, Sec. 2.4.2)
+EXP2_N_WINDOWS = 26                  # 5-minute NBBO sampling windows per session, stratified approx. to the full-session
+                                     # median of Appendix A (page 29); 26 windows spread across the 9:30-16:00 session
+                                     # (~130 of 390 minutes, one every ~15 minutes) rather than the full tick stream,
+                                     # which is infeasible to download for every near-expiry SPY option in the sample
+EXP2_LIMIT_PER_WINDOW = 1000         # quotes retrieved per NBBO sampling window (Massive /v3/quotes page size)
 
 # ---------------------------------------------------------------------------
 # Experiment 3: multiperiod binomial replication (Sec. 3)
