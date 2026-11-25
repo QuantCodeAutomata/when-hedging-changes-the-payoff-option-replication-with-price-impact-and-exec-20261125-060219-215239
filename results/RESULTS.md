@@ -41,21 +41,38 @@ Executed configuration: 8 expiries sampled evenly across 2025-01-01 to
 across the same six months), 68 usable option/expiry/strike observations after
 excluding 12 strike/expiry combinations with no usable NBBO quotes on the
 preceding session. SPY daily bars via the QuantX Dataloader; SPY and option
-NBBO quotes and the listed option chain via Massive REST.
+NBBO quotes and the listed option chain via Massive REST, sampled over a
+widened intraday window on the preceding session (see below).
 
 | Moneyness band | n options | Median explained spread (%) | Paper (%) |
 |---|---|---|---|
-| δ ≤ 0.5% | 16 | 642.9 | 85 |
-| δ ≤ 1% | 38 | 600.8 | 58.53 |
-| δ ≤ 2% | 55 | 553.6 | 35.72 |
-| δ ≤ 5% | 65 | 359.6 | 9.04 |
-| all strikes | 68 | 312.8 | 4.49 |
+| δ ≤ 0.5% | 16 | 1029.7 | 85 |
+| δ ≤ 1% | 38 | 889.1 | 58.53 |
+| δ ≤ 2% | 55 | 748.7 | 35.72 |
+| δ ≤ 5% | 65 | 498.8 | 9.04 |
+| all strikes | 68 | 363.5 | 4.49 |
 
 The qualitative ranking (explained percentage falling as the moneyness band
 widens) holds in the executed sample, but every band's explained percentage is
 far above 100%, i.e. the calibrated model over-predicts the observed spread by
-roughly 3.5x-7.5x, instead of under-predicting it as in the paper's 85%→4.49%
+roughly 4x-12x, instead of under-predicting it as in the paper's 85%→4.49%
 sequence.
+
+A second localization run widened the intraday NBBO quote-sampling coverage
+of the preceding session (testing the hypothesis that the first run's
+quote sample was too sparse to estimate median quoted size reliably, which
+would bias the calibrated φ upward and the model-implied spread with it).
+The hypothesis is rejected by the data: the wider sample moves the
+calibrated φ only marginally (e.g. all-strikes band: 3.33e-5 vs. 3.67e-5
+before) while the implied φ recovered from the observed spread falls
+further (3.15e-6 vs. a larger value before), so the gap between calibrated
+and implied φ widens and every band's over-explanation gets larger rather
+than smaller. Quote-sampling density on the preceding session is therefore
+ruled out as the dominant cause of the gap; the root cause (a structural
+difference between the calibrated φ and the φ implied by the observed
+option spread, with the model systematically over-predicting the quoted
+option spread by close to an order of magnitude) was not identified further
+within the two full runs executed for this experiment.
 
 **Verdict:** not reproduced. The direction of the band ranking matches the
 paper, but the magnitude is materially off (differs by far more than 50% and
@@ -179,7 +196,7 @@ code defect was found.
   sampled pool and are spread across bands, so they are not identified as the
   cause of the spread-magnitude gap.
 * Experiment 2's observed/model spread discrepancy (bands over-explained by
-  roughly 3.5x-7.5x instead of under-explained as in the paper) was checked by
+  roughly 3.6x-10.3x instead of under-explained as in the paper) was checked by
   component tests of `calibrate_phi_midpoint` and `model_implied_option_spread`
   against the one-period formulas of Proposition 2.4 and Appendix A (see
   `tests/test_calibration.py`), which hold on synthetic inputs. Three further

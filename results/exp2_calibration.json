@@ -63,52 +63,52 @@
     {
       "band": "delta<=0.5%",
       "n_options": 16,
-      "median_explained_pct": 642.9444996923701,
-      "median_observed_spread_usd": 0.030000000000000027,
-      "median_model_spread_usd": 0.15419277340217774,
-      "median_implied_n_shares": 1319.9889617018937,
-      "median_implied_phi": 8.842396158059239e-06,
-      "median_calibrated_phi": 3.666666666663332e-05
+      "median_explained_pct": 1029.677122128176,
+      "median_observed_spread_usd": 0.02499999999999991,
+      "median_model_spread_usd": 0.20459503013715852,
+      "median_implied_n_shares": 822.3999589501923,
+      "median_implied_phi": 4.001698269140437e-06,
+      "median_calibrated_phi": 3.125000000006632e-05
     },
     {
       "band": "delta<=1.0%",
       "n_options": 38,
-      "median_explained_pct": 600.757155526946,
-      "median_observed_spread_usd": 0.029999999999999805,
-      "median_model_spread_usd": 0.15051505162632228,
-      "median_implied_n_shares": 1169.2873664584984,
-      "median_implied_phi": 8.308986141086981e-06,
-      "median_calibrated_phi": 3.666666666663332e-05
+      "median_explained_pct": 889.0829627045223,
+      "median_observed_spread_usd": 0.020000000000000018,
+      "median_model_spread_usd": 0.1947410000835923,
+      "median_implied_n_shares": 996.4353615733642,
+      "median_implied_phi": 4.878097905172026e-06,
+      "median_calibrated_phi": 3.125000000006632e-05
     },
     {
       "band": "delta<=2.0%",
       "n_options": 55,
-      "median_explained_pct": 553.5717784808473,
+      "median_explained_pct": 748.7444328945995,
       "median_observed_spread_usd": 0.020000000000000018,
-      "median_model_spread_usd": 0.13709289452111584,
-      "median_implied_n_shares": 1330.976021925815,
-      "median_implied_phi": 8.268642905192258e-06,
-      "median_calibrated_phi": 3.333333333330302e-05
+      "median_model_spread_usd": 0.15594135706289958,
+      "median_implied_n_shares": 1164.3214623111255,
+      "median_implied_phi": 3.1377039388736435e-06,
+      "median_calibrated_phi": 2.916666666664014e-05
     },
     {
       "band": "delta<=5.0%",
       "n_options": 65,
-      "median_explained_pct": 359.56345258580035,
-      "median_observed_spread_usd": 0.020000000000000018,
-      "median_model_spread_usd": 0.08553102289250436,
-      "median_implied_n_shares": 1351.3000125742385,
-      "median_implied_phi": 8.272453974465772e-06,
-      "median_calibrated_phi": 3.999999999996363e-05
+      "median_explained_pct": 498.7626470058566,
+      "median_observed_spread_usd": 0.010000000000000009,
+      "median_model_spread_usd": 0.12176604930627691,
+      "median_implied_n_shares": 1181.8223972550725,
+      "median_implied_phi": 3.1501092446384394e-06,
+      "median_calibrated_phi": 3.3333333333492496e-05
     },
     {
       "band": "all strikes",
       "n_options": 68,
-      "median_explained_pct": 312.8268813809336,
-      "median_observed_spread_usd": 0.020000000000000018,
-      "median_model_spread_usd": 0.08300654159503543,
-      "median_implied_n_shares": 1351.3000125742385,
-      "median_implied_phi": 8.272453974465772e-06,
-      "median_calibrated_phi": 3.999999999996363e-05
+      "median_explained_pct": 363.46995170246373,
+      "median_observed_spread_usd": 0.010000000000000009,
+      "median_model_spread_usd": 0.11686879951872964,
+      "median_implied_n_shares": 1181.8223972550725,
+      "median_implied_phi": 3.1501092446384394e-06,
+      "median_calibrated_phi": 3.3333333333492496e-05
     }
   ]
 }
