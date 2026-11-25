@@ -1,0 +1,114 @@
+{
+  "data_source": "QuantX Dataloader (SPY daily bars) and Massive REST (SPY/option NBBO quotes, option contract reference)",
+  "sample_period": {
+    "start": "2025-01-01",
+    "end": "2025-06-30"
+  },
+  "n_expiries_paper": null,
+  "n_options_paper": 15570,
+  "n_expiries_run": 8,
+  "n_options_run": 68,
+  "n_skipped": 12,
+  "skipped_reasons": [
+    {
+      "expiry": "2025-01-02:O:SPY250102C00612000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250102C00612000 on 2024-12-31"
+    },
+    {
+      "expiry": "2025-01-02:O:SPY250102C00630000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250102C00630000 on 2024-12-31"
+    },
+    {
+      "expiry": "2025-01-29:O:SPY250129C00630000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250129C00630000 on 2025-01-28"
+    },
+    {
+      "expiry": "2025-01-29:O:SPY250129C00650000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250129C00650000 on 2025-01-28"
+    },
+    {
+      "expiry": "2025-02-24:O:SPY250224C00626000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250224C00626000 on 2025-02-21"
+    },
+    {
+      "expiry": "2025-02-24:O:SPY250224C00645000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250224C00645000 on 2025-02-21"
+    },
+    {
+      "expiry": "2025-06-03:O:SPY250603C00609000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250603C00609000 on 2025-06-02"
+    },
+    {
+      "expiry": "2025-06-03:O:SPY250603C00621000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250603C00621000 on 2025-06-02"
+    },
+    {
+      "expiry": "2025-06-03:O:SPY250603C00640000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250603C00640000 on 2025-06-02"
+    },
+    {
+      "expiry": "2025-06-30:O:SPY250630C00633000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250630C00633000 on 2025-06-27"
+    },
+    {
+      "expiry": "2025-06-30:O:SPY250630C00646000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250630C00646000 on 2025-06-27"
+    },
+    {
+      "expiry": "2025-06-30:O:SPY250630C00664000",
+      "reason": "option quotes failed: no usable NBBO quotes for O:SPY250630C00664000 on 2025-06-27"
+    }
+  ],
+  "bands": [
+    {
+      "band": "delta<=0.5%",
+      "n_options": 16,
+      "median_explained_pct": 642.9444996923701,
+      "median_observed_spread_usd": 0.030000000000000027,
+      "median_model_spread_usd": 0.15419277340217774,
+      "median_implied_n_shares": 1319.9889617018937,
+      "median_implied_phi": 8.842396158059239e-06,
+      "median_calibrated_phi": 3.666666666663332e-05
+    },
+    {
+      "band": "delta<=1.0%",
+      "n_options": 38,
+      "median_explained_pct": 600.757155526946,
+      "median_observed_spread_usd": 0.029999999999999805,
+      "median_model_spread_usd": 0.15051505162632228,
+      "median_implied_n_shares": 1169.2873664584984,
+      "median_implied_phi": 8.308986141086981e-06,
+      "median_calibrated_phi": 3.666666666663332e-05
+    },
+    {
+      "band": "delta<=2.0%",
+      "n_options": 55,
+      "median_explained_pct": 553.5717784808473,
+      "median_observed_spread_usd": 0.020000000000000018,
+      "median_model_spread_usd": 0.13709289452111584,
+      "median_implied_n_shares": 1330.976021925815,
+      "median_implied_phi": 8.268642905192258e-06,
+      "median_calibrated_phi": 3.333333333330302e-05
+    },
+    {
+      "band": "delta<=5.0%",
+      "n_options": 65,
+      "median_explained_pct": 359.56345258580035,
+      "median_observed_spread_usd": 0.020000000000000018,
+      "median_model_spread_usd": 0.08553102289250436,
+      "median_implied_n_shares": 1351.3000125742385,
+      "median_implied_phi": 8.272453974465772e-06,
+      "median_calibrated_phi": 3.999999999996363e-05
+    },
+    {
+      "band": "all strikes",
+      "n_options": 68,
+      "median_explained_pct": 312.8268813809336,
+      "median_observed_spread_usd": 0.020000000000000018,
+      "median_model_spread_usd": 0.08300654159503543,
+      "median_implied_n_shares": 1351.3000125742385,
+      "median_implied_phi": 8.272453974465772e-06,
+      "median_calibrated_phi": 3.999999999996363e-05
+    }
+  ]
+}

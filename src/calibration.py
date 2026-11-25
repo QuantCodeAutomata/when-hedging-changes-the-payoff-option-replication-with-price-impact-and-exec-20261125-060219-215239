@@ -40,9 +40,12 @@ def risk_neutral_probability_one_day(s0: float, st_up: float, st_down: float) ->
 
 def calibrate_phi_midpoint(half_spread: float, vol_ask: float, vol_bid: float) -> float:
     """Calibrate the execution-cost parameter phi from the underlying's
-    median half-spread S^S and median quoted volumes at the best ask/bid,
+    S^S, defined as half the median quoted spread (S^S = 0.5 * median(ask -
+    bid)), and the median quoted volumes at the best ask/bid:
     phi = (S^S / 2) * (1/V^{S,a} + 1/V^{S,b}), using the midpoint regime
-    lambda = 2*phi (Appendix A, page 29)."""
+    lambda = 2*phi (Appendix A, page 29). ``half_spread`` is S^S itself
+    (already halved by the caller); this function applies the formula's own
+    additional factor of 1/2 on top of it."""
     assert vol_ask > 0.0 and vol_bid > 0.0, "quoted volumes must be positive"
     return 0.5 * half_spread * (1.0 / vol_ask + 1.0 / vol_bid)
 

@@ -37,7 +37,8 @@ EXP2_N_OPTIONS_PAPER = 15570
 # between Jan and Jun 2025 (daily expirations) is not feasible in the time
 # available; see "Deviations from the paper" in results/RESULTS.md for the
 # executed, reduced expiration sample and the corresponding command.
-EXP2_N_EXPIRIES_RUN = 8              # expirations sampled across the period for the executed run
+EXP2_N_EXPIRIES_RUN = 8              # expirations sampled across the period for the executed run (time-reduced)
+EXP2_N_EXPIRIES_PAPER = 125          # approx. trading days Jan-Jun 2025 (one expiry/day, SPY daily options, Sec. 2.4.2)
 
 # ---------------------------------------------------------------------------
 # Experiment 3: multiperiod binomial replication (Sec. 3)
